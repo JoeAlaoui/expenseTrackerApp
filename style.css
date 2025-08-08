@@ -1,91 +1,117 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3eafc 0%, #cfd9df 100%);
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
 }
 
 .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 32px;
     max-width: 600px;
     width: 100%;
 }
 
 h1, h2 {
-    color: #333;
+      color: #222;
     text-align: center;
+    font-weight: 600;
 }
 
 h1 {
-    margin-bottom: 20px;
+      margin-bottom: 24px;
+    font-size: 2rem;
 }
 
 h2 {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-size: 1.3rem;
 }
 
 .input-group {
-    margin-bottom: 15px;
+     margin-bottom: 16px;
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 5px;
-    color: #555;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
 }
 
 .input-group input,
 .input-group select {
-    width: calc(100% - 10px);
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(2px);
+    transition: border-color 0.2s;
 }
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #007aff;
+    outline: none;
+}
+
 
 .button-group button,
 .clear-button-group button {
-    background-color: #FF69B4;
+  background: linear-gradient(90deg, #007aff 0%, #00c6fb 100%);
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,122,255,0.08);
+    transition: background 0.2s;
 }
 
 .button-group button:hover,
 .clear-button-group button:hover {
-    background-color: #FF1493;
+       background: linear-gradient(90deg, #0051a8 0%, #0096c7 100%);
 }
 
 .table-container {
-    margin-top: 20px;
+     margin-top: 24px;
 }
 
 table {
-    width: 100%;
+      width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(31,38,135,0.07);
+    backdrop-filter: blur(4px);
 }
 
 th, td {
-    text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+   text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 th {
-    background-color: #FF69B4;
-    color: white;
+   background: rgba(0,122,255,0.12);
+    color: #222;
+    font-weight: 600;
 }
 
 td {
@@ -93,32 +119,39 @@ td {
 }
 
 td button {
-    background-color: #FF1493;
+   background: linear-gradient(90deg, #ff3b30 0%, #ff9500 100%);
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 6px 14px;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(255,59,48,0.08);
+    transition: background 0.2s;
 }
 
 td button:hover {
-    background-color: #C71585;
+    background: linear-gradient(90deg, #c1271a 0%, #c76a00 100%);
 }
 
 .summary {
-    background-color: #FFB3FF;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(8px);
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 14px;
     text-align: center;
-    color: #333;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(31,38,135,0.07);
 }
 
 .summary p {
-    margin: 10px 0;
+     margin: 12px 0;
     font-size: 18px;
 }
 
 .summary span {
-    font-weight: bold;
+     font-weight: bold;
+    color: #007aff;
 }

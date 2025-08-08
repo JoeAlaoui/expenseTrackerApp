@@ -20,22 +20,21 @@
     <label for="income-amount">Amount (DH):</label>
     <input type="number" id="income-amount" placeholder="E.g. 5000" />
   </div>
-  <div class="input-group">
+    <div class="input-group">
     <label for="income-date">Date:</label>
     <input type="date" id="income-date" />
   </div>
   <div class="button-group">
     <button onclick="addIncome()">Add Income</button>
+  </div>
 </div>
 <div class="section">
     <h2>Expenses</h2>
-    <!-- expense description -->
     <div class="input-group">
       <label for="expense-description">Description:</label>
       <input type="text" id="expense-description" placeholder="E.g. Rent" />
     </div>
-     <!-- expense category  -->
-      <div class="input-group">
+    <div class="input-group">
       <label for="expense-category">Category:</label>
       <select id="expense-category">
         <option value="housing">Housing</option>
@@ -47,17 +46,18 @@
         <option value="savings">Savings</option>
         <option value="other">Other</option>
       </select>
-      <!-- expense amount -->
-      <div class="input-group">
-        <label for="expense-amount">Amount (DH):</label>
-        <input type="number" id="expense-amount" placeholder="E.g. 2000" />
-      </div>
-      <div class="input-group">
-        <label for="expense-date">Date:</label>
-        <input type="date" id="expense-date" />
-      </div>
-<div class="button-group">
-    <button onclick="addExpense()">Add Expense</button>
+    </div>
+    <div class="input-group">
+      <label for="expense-amount">Amount (DH):</label>
+      <input type="number" id="expense-amount" placeholder="E.g. 2000" />
+    </div>
+    <div class="input-group">
+      <label for="expense-date">Date:</label>
+      <input type="date" id="expense-date" />
+    </div>
+    <div class="button-group">
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
 </div>
 
 <div class="table-container">
@@ -83,14 +83,15 @@
 <div class="summary">
   <h2>Budget Summary</h2>
   <p>Total Income: <span id="total-income">0</span> DH</p>
-  <p>Total Expenses: <span id="total-expenses">0</span> DH</p>
+  <p>Total Expenses: <span id="total-expense">0</span> DH</p>
   <p>Balance: <span id="balance">0</span> DH</p>
 
 </div>
 
 <div class="clear-button-group">
-    <button onclick="clearAll()">Clear All</button>
+    <button onclick="clearInputs()">Clear All</button>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
