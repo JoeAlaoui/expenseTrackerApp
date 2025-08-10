@@ -89,6 +89,7 @@ h2 {
 
 .table-container {
      margin-top: 24px;
+      overflow-x: auto;
 }
 
 table {
@@ -186,4 +187,41 @@ td button:hover {
 }
 #balance.negative {
   color: #dc3545 !important;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 0;
+        align-items: flex-start;
+    }
+    .container {
+        max-width: 100%;
+        padding: 1em;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    h1 {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+    .input-group input,
+    .input-group select {
+        font-size: 1em;
+        padding: 10px;
+    }
+    table, th, td {
+        font-size: 0.95em;
+        padding: 8px;
+    }
+    .summary {
+        padding: 10px;
+        font-size: 1em;
+    }
+    .button-group button,
+    .clear-button-group button {
+        padding: 10px 16px;
+        font-size: 1em;
+    }
 }
