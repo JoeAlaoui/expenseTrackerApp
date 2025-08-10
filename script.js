@@ -25,6 +25,7 @@ function addIncome() {
     }
 
     addTransaction(description, 'Income', amount, date, 'Income');
+    showNotification('Income added successfully!', 'Income');
     updateSummary();
     clearInputs();
 }
@@ -41,6 +42,7 @@ function addExpense() {
     }
 
     addTransaction(description, category, amount, date, 'Expense');
+    showNotification('Expense added successfully!', 'Expense');
     updateSummary();
     clearInputs();
 }
@@ -81,6 +83,18 @@ function updateSummary() {
     totalExpense.textContent = totalExpenses.toFixed(2);
     totalIncome.textContent = totalIncomes.toFixed(2);
     balance.textContent = (totalIncomes - totalExpenses).toFixed(2);
+
+     const currentBalance = totalIncomes - totalExpenses;
+    balance.textContent = currentBalance.toFixed(2);
+
+    // Apply positive/negative class
+    if (currentBalance >= 0) {
+        balance.classList.remove('negative');
+        balance.classList.add('positive');
+    } else {
+        balance.classList.remove('positive');
+        balance.classList.add('negative');
+    }
 }
 
 function clearInputs() {
@@ -91,4 +105,14 @@ function clearInputs() {
     expenseCategoryInput.value = 'housing';
     expenseAmountInput.value = '';
     expenseDateInput.value = '';
+}
+
+function showNotification(message, type) {
+    const notification = document.getElementById(`notification${type}`);
+    notification.textContent = message;
+    notification.classList.remove('hidden');
+
+    setTimeout(function() {
+        notification.classList.add('hidden');
+    }, 2000); // Notification will disappear after 2 seconds
 }

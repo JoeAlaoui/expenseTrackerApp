@@ -155,3 +155,35 @@ td button:hover {
      font-weight: bold;
     color: #007aff;
 }
+
+.notificationIncome,
+.notificationExpense {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 122, 255, 0.9);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(31, 38, 135, 0.15);
+    transition: opacity 0.7s ease-in-out;
+    opacity: 0;
+    z-index: 1000;
+}   
+
+.notificationIncome.show,
+.notificationExpense.show {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+    transition: opacity 0.9s ease-in-out;
+}
+
+#balance.positive {
+  color: #28a745 !important;
+}
+#balance.negative {
+  color: #dc3545 !important;
+}
