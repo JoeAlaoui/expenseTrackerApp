@@ -208,8 +208,20 @@ td button:hover {
     }
     .input-group input,
     .input-group select {
-        font-size: 1em;
+            font-size: 1em;
         padding: 10px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    input[type="date"] {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+        width: 100%;
+        box-sizing: border-box;
     }
     table, th, td {
         font-size: 0.95em;
