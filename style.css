@@ -220,9 +220,6 @@ td button:hover {
         box-sizing: border-box;
     }
 
-        width: 100%;
-        box-sizing: border-box;
-    }
     table, th, td {
         font-size: 0.95em;
         padding: 8px;
