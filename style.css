@@ -217,6 +217,7 @@ td button:hover {
     input[type="date"] {
         max-width: 100%;
         padding: 10px;
+        margi-right: 10px;
         width: 100%;
         box-sizing: border-box;
     }
